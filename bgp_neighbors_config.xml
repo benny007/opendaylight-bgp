@@ -1,0 +1,20 @@
+<neighbor xmlns="urn:opendaylight:params:xml:ns:yang:bgp:openconfig-extensions">
+    <neighbor-address>10.1.128.120</neighbor-address>
+    <timers>
+        <config>
+            <hold-time>90</hold-time>
+            <connect-retry>10</connect-retry>
+        </config>
+    </timers>
+    <transport>
+        <config>
+            <remote-port>179</remote-port>
+            <passive-mode>false</passive-mode>
+        </config>
+    </transport>
+    <config>
+        <peer-type>INTERNAL</peer-type>
+    </config>
+    <afi-safis>
+    </afi-safis>
+</neighbor>
