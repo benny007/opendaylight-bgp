@@ -10,6 +10,15 @@ import requests
 app = Flask(__name__)
 
 #########################################################
+# ! ADAPT TO YOUR SETUP !
+#########################################################
+
+odl_ip = "10.1.20.144"
+odl_port = "8181"
+odl_username = "admin"
+odl_password = "admin"
+
+#########################################################
 # GET THE ROUTE BEST NEXT HOP FROM THE ODL POINT OF VIEW
 #########################################################
 
@@ -44,7 +53,7 @@ def get_bgp_route():
 def bgp_route_status(prefix,subnet):
 
  #This is the ODL URL to query with the prefix from the Slack user's request
- odl_route_status_url = "http://admin:admin@10.1.20.144:8181/restconf/operational/bgp-rib:bgp-rib/rib/voxbone/loc-rib/tables/bgp-types:ipv4-address-family/bgp-types:unicast-subsequent-address-family/bgp-inet:ipv4-routes/ipv4-route/{}%2F{}/0".format(prefix,subnet)
+ odl_route_status_url = "http://{}:{}@{}:{}/restconf/operational/bgp-rib:bgp-rib/rib/voxbone/loc-rib/tables/bgp-types:ipv4-address-family/bgp-types:unicast-subsequent-address-family/bgp-inet:ipv4-routes/ipv4-route/{}%2F{}/0".format(odl_username,odl_password,odl_ip,odl_port,prefix,subnet)
 
  #That's when we send the request to ODL with the python module requests
  odl_route_status_request = requests.get(odl_route_status_url)
