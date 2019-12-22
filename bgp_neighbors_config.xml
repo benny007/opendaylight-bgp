@@ -16,5 +16,17 @@
         <peer-type>INTERNAL</peer-type>
     </config>
     <afi-safis>
+     <afi-safi>
+            <afi-safi-name xmlns:x="http://openconfig.net/yang/bgp-types">x:IPV4-UNICAST</afi-safi-name>
+        </afi-safi>
+<!-- Here below some other valid address family - sub address family (afi-safi)       
+        
+        <afi-safi>
+            <afi-safi-name xmlns:x="http://openconfig.net/yang/bgp-types">x:IPV6-UNICAST</afi-safi-name>
+        </afi-safi>
+        <afi-safi>
+            <afi-safi-name>LINKSTATE</afi-safi-name>
+        </afi-safi>
+        !-->
     </afi-safis>
 </neighbor>
