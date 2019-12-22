@@ -1,0 +1,32 @@
+<neighbor xmlns="urn:opendaylight:params:xml:ns:yang:bgp:openconfig-extensions">
+    <neighbor-address>10.1.128.121</neighbor-address>
+    <timers>
+        <config>
+            <hold-time>90</hold-time>
+            <connect-retry>10</connect-retry>
+        </config>
+    </timers>
+    <transport>
+        <config>
+            <remote-port>179</remote-port>
+            <passive-mode>false</passive-mode>
+        </config>
+    </transport>
+    <config>
+        <peer-type>INTERNAL</peer-type>
+    </config>
+    <afi-safis>
+     <afi-safi>
+            <afi-safi-name xmlns:x="http://openconfig.net/yang/bgp-types">x:IPV4-UNICAST</afi-safi-name>
+        </afi-safi>
+<!-- Here below some other valid address family - sub address family (afi-safi)       
+        
+        <afi-safi>
+            <afi-safi-name xmlns:x="http://openconfig.net/yang/bgp-types">x:IPV6-UNICAST</afi-safi-name>
+        </afi-safi>
+        <afi-safi>
+            <afi-safi-name>LINKSTATE</afi-safi-name>
+        </afi-safi>
+        !-->
+    </afi-safis>
+</neighbor>
