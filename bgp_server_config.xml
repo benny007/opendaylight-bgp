@@ -1,5 +1,5 @@
 <bgp-peer-acceptor-config xmlns="urn:opendaylight:params:xml:ns:yang:odl-bgp-peer-acceptor-config">
-    <config-name>CSR-1</config-name>
+    <config-name>default</config-name>
     <binding-address>0.0.0.0</binding-address>
     <binding-port>179</binding-port>
 </bgp-peer-acceptor-config>

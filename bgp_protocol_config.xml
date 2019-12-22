@@ -1,12 +1,20 @@
 <protocol xmlns="http://openconfig.net/yang/network-instance">
-    <name>CSR-1</name>
+    <name>10.1.20.144</name>
     <identifier xmlns:x="http://openconfig.net/yang/policy-types">x:BGP</identifier>
     <bgp xmlns="urn:opendaylight:params:xml:ns:yang:bgp:openconfig-extensions">
         <global>
             <config>
-                <router-id>10.0.0.99</router-id>
+                <router-id>10.1.220.56</router-id>
                 <as>65000</as>
             </config>
+            <apply-policy>
+                 <config>
+                     <default-export-policy>REJECT-ROUTE</default-export-policy>
+                     <default-import-policy>ACCEPT-ROUTE</default-import-policy>
+                     <import-policy>voxbone-rib-policy-accept</import-policy>
+                     <export-policy>default-odl-export-policy</export-policy>
+                 </config>
+             </apply-policy>
         </global>
     </bgp>
 </protocol>
