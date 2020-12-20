@@ -1,5 +1,5 @@
 <policy-definition xmlns="http://openconfig.net/yang/routing-policy">
-     <name>voxbone-rib-policy-accept</name>
+     <name>default-rib-policy-accept</name>
      <statements>
          <statement>
              <name>accept-all-incoming-routes</name>
