@@ -11,7 +11,7 @@
                  <config>
                      <default-export-policy>REJECT-ROUTE</default-export-policy>
                      <default-import-policy>ACCEPT-ROUTE</default-import-policy>
-                     <import-policy>voxbone-rib-policy-accept</import-policy>
+                     <import-policy>default-rib-policy-accept</import-policy>
                      <export-policy>default-odl-export-policy</export-policy>
                  </config>
              </apply-policy>
